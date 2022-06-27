@@ -13,14 +13,11 @@ pipeline{
         
             }
         }
+    }
 
-
-        post {
-            failure {
-                echo "Build Failed"
-            }
+    post {
+        failure {
+            echo "Build Failed"
         }
-
-
     }
 }
