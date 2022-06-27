@@ -5,10 +5,11 @@ pipeline{
 
         stage("build"){
             steps{
-                timeout(time:10, unit:'MINUTES') {
+                timeout(time:1, unit:'MINUTES') {
 
-                sh 'mvn package'
-                sh 'boxfuse run target/hello-1.0.war'
+                    sh 'mvn package'
+                    sh 'boxfuse run target/hello-1.0.war'
+                }
         
             }
         }
